@@ -53,7 +53,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
-                ' untuk dapat deploy perubahan terbaru dari Lord Userbot.`'
+                ' untuk dapat deploy perubahan terbaru dari KEN-UBOT.`'
             )
             repo.__del__()
             return
@@ -67,7 +67,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nDyno Lord-Userbot Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
+                         '\nUpdate KEN-UBOT Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
