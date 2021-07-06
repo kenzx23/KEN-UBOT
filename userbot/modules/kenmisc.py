@@ -1047,24 +1047,24 @@ CMD_HELP.update({
 # LORD USERBOT
 CMD_HELP.update({"app": "**Modules:** __App__\n\n**Perintah:** `.app <nama app>`"
                  "\n**Penjelasan:** Dapatkan Detail Informasi Applikasi"})
-# LORD USERBOT
+# KEN UBOT
 CMD_HELP.update({"undelete": "**Modules:** __Undelete__\n\n**Perintah:** `.undlt`"
                  "\n**Penjelasan:** Urungkan Pesan Yang Dihapus Tapi Anda Harus Menjadi Admin"})
 # LORD USERBOT
 CMD_HELP.update({"grab": "**Modules:** __Grab__\n\n**Perintah:** `.grab <jumlah>`"
                  "\n**Penjelasan:** Mengambil Profil, Bisa Balas Ke Pesan Pengguna Lain Untuk Mengambil Profilnya\n\n**WARN:** JANGAN MENYALAH GUNAKAN PERINTAH INI"})
-# LORD USERBOT
+# KEN UBOT
 CMD_HELP.update(
     {
         "clone": "**Modules:** __Clone__\n\n**Perintah:** `.clone <username/balas pesan>`"
         "\n**Penjelasan:** Clone Akun Seseorang, Tapi Username Tidak di Clone"
         "\n\n**Perintah:** `.rclone`"
         "\n**Penjelasan:** Mengembalikan Akun Anda Seperti Semula"})
-# LORD USERBOT
+# KEN UBOT
 CMD_HELP.update({"glitch": "**Modules:** __Glitch__\n\n**Perintah:** `.glitch <level>`"
                  "\n**Penjelasan:** Balas Ke Media, Memberikan Efek Glicth Ke Media, Level 1 - 8"
                  "\n\n**Perintah:** `.glitchs <level>`"
                  "\n**Penjelasan:** Balas Ke Media, Memberikan Efek Glitch Ke Media, Level 1 - 8\n\n**NOTE:** Jika Tidak Memberikan Level Maka Otomatis Default Memilih Level 2"})
-# LORD USERBOT # ALVIN GANTENG
+# KEN UBOT # KEN GANTENG
 CMD_HELP.update({"randomprofil": "**Modules:** __Random Profil__\n\n**Perintah:** `.randompp`"
                  "\n**Penjelasan:** Mengganti Foto Profil Anda Secara Otomatis, Untuk Menghentikan Perintah Ini Gunakan Perintah `.restart`"})
