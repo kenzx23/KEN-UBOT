@@ -26,7 +26,7 @@ async def var(m):
 
 CMD_HELP.update({
     "kenhelper":
-    "`.lordhelp`\
+    "`.kenhelp`\
 \nPenjelasan: Bantuan Untuk KEN-UBOT.\
 \n`.lordvar`\
 \nPenjelasan: Untuk Melihat Beberapa Daftar Vars."
