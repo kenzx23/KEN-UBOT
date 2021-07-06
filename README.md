@@ -40,7 +40,7 @@ Caranya Pergi Ke Grup Support SPAM GROUP Lalu Ketik #String [TEKAN DISINI](https
 
   > Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
 ```
-Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot_Group)
+JOIN DULU YA TOT KE GRUP GUA -> [TEKAN DISINI](https://t.me/zxnihbang)
 ## <p align="center">DEPLOY KEN-UBOT</p>
 
 
