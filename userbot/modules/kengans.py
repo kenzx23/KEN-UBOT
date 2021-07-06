@@ -79,7 +79,7 @@ async def typewriter(typew):
                      "╬═╬ \n"
                      "╬═╬ \n"
                      "╬═╬ \n"
-                     "╬═╬ Hallo Semuanya :) \n"
+                     "╬═╬ Dadah Anak Ngentot!!! \n"
                      "╬═╬☻/ \n"
                      "╬═╬/▌ \n"
                      "╬═╬/ \\ \n")
@@ -98,7 +98,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.bundir(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Dadah Semuanya...`          \n　　　　　|"
+    await typew.edit("`Gua Mati Dulu Bye anak Kontol...`          \n　　　　　|"
                      "\n　　　　　| \n"
                      "　　　　　| \n"
                      "　　　　　| \n"
@@ -114,14 +114,14 @@ async def typewriter(typew):
                      "　　　　　 Ｕ Ｕ\n")
 
 
-@register(outgoing=True, pattern='^.awkwok(?: |$)(.*)')
+@register(outgoing=True, pattern='^.awokwok(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("────██──────▀▀▀██\n"
                      "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
                      "▄▀──█▄▄──────█─█▄▄\n"
                      "─▄▄▄▀──▀▄───▄▄▄▀──▀▄\n"
-                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok..`")
+                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok Ngentot..`")
 
 
 @register(outgoing=True, pattern='^.ular(?: |$)(.*)')
@@ -301,7 +301,7 @@ async def typewriter(typew):
     await typew.edit("**♪┗ ( ･o･) ┓♪┏ (・o･) ┛♪**")
 
 
-@register(outgoing=True, pattern='^.foff(?: |$)(.*)')
+@register(outgoing=True, pattern='^.fof(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(".                       /¯ )")
@@ -325,6 +325,6 @@ CMD_HELP.update({
     \nPenjelasan: jempol\
     \n\n`.awkwok`\
     \nPenjelasan: ketawa lari.\
-    \n\n`.ular` ; `.babi` ; `.foff` ; `.foto` ; `.ajg`\
+    \n\n`.ular` ; `.babi` ; `.fof` ; `.foto` ; `.ajg`\
     \nPenjelasan: liat sendiri."
 })
