@@ -46,31 +46,12 @@ DEF_UNAPPROVED_MSG = (
 # =================================================================
 
 
-
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
 """Userbot module for keeping control who PM you."""
-
-from sqlalchemy.exc import IntegrityError
-from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
-from telethon.tl.functions.messages import ReportSpamRequest
-from telethon.tl.types import User
-from userbot.events import register
-from userbot import (
-    BOTLOG,
-    BOTLOG_CHATID,
-    CMD_HELP,
-    COUNT_PM,
-    LASTMSG,
-    LOGS,
-    PM_AUTO_BAN,
-    PMPERMIT_TEXT,
-    PMPERMIT_PIC,
-    ALIVE_NAME,
-)
 
 
 if PMPERMIT_PIC is None:
