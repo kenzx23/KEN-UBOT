@@ -40,7 +40,7 @@ DEF_UNAPPROVED_MSG = (
     "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
     f"⎆ **Dilarang Spam** \n"
     "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
-    f"◈ **KING** : {DEFAULTUSER}\n"
+    f"◈ **TUAN** : {DEFAULTUSER}\n"
     f"◈ **SUPPORT** ⭐ KEN-UBOT⭐\n")
 # =================================================================
 
@@ -414,7 +414,7 @@ async def permitpm(event):
 
 CMD_HELP.update(
     {
-        "pmpermit": "**⭐ Plugin :** `Pesan Pribadi`\
+        "pmpermit": "**✓ Plugin :** `Pesan Pribadi`\
         "pm": " >`.setuju | .ok`"
         "\nPenjelasan: Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
         "\n\n>`.tolak | .nopm`"
