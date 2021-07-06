@@ -23,7 +23,7 @@ Repo Yang Dibuat [ken](https://t.me/xgothboi) Dari Berbagai Repo Userbot Github
 
 ### CARA MENDAPATKAN STRING SESSON
 
-Caranya Pergi Ke Grup Support Lord-Userbot Lalu Ketik #String [TEKAN DISINI](https://t.me/LordUserbot_Group) Untuk Masuk Ke Grup Support
+Caranya Pergi Ke Grup Support SPAM GROUP Lalu Ketik #String [TEKAN DISINI](https://t.me/zeusspam) Untuk Masuk Ke Grup Support
 
 ## Bagaimana Cara Deploy?
 
