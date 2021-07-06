@@ -23,19 +23,25 @@ from userbot import (
     ALIVE_NAME,
 )
 
-from userbot.events import register
+
+if PMPERMIT_PIC is None:
+    CUSTOM_PIC = "https://telegra.ph/file/9cf8933ad10f520fc72e2.jpg"
+else:
+    CUSTOM_PIC = str(PMPERMIT_PIC)
 
 # ========================= CONSTANTS ============================
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+CUSTOM_TEXT = str(
+    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Halo kawan, saya bot yang menjaga room chat Tuan {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
 DEF_UNAPPROVED_MSG = (
-    f"__**ROOM CHAT || {DEFAULTUSER}**__\n"
-    "━━━━━━━━━━━━━━━━━━━━\n"
-    f"**HALLO SELAMAT DATANG, SAYA ADALAH BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA**\n"
-    "┏━━━━━━━━━━━━━━━━━━━\n"
-    "┣[• `PESAN OTOMATIS`\n"
-    "┣[• `BY KEN-UBOT`\n"
-    "┗━━━━━━━━━━━━━━━━━━━")
+    f"╔══════ ⭐ ══════╗\n      **ROOM CHAT TUAN**     \n╚══════ 〠 ══════╝  \n"
+    f"⎆ __{CUSTOM_TEXT}__ \n"
+    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
+    f"⎆ **Dilarang Spam** \n"
+    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
+    f"◈ **KING** : {DEFAULTUSER}\n"
+    f"◈ **SUPPORT** ⭐ KEN-UBOT⭐\n")
 # =================================================================
 
 
@@ -64,8 +70,10 @@ async def permitpm(event):
         getmsg = gvarstatus("unapproved_msg")
         if getmsg is not None:
             UNAPPROVED_MSG = getmsg
+            CUSTOM_PIC = getmsg
         else:
             UNAPPROVED_MSG = DEF_UNAPPROVED_MSG
+            CUSTOM_PIC = PMPERMIT_PIC
 
         # This part basically is a sanity check
         # If the message that sent before is Unapproved Message
@@ -77,12 +85,12 @@ async def permitpm(event):
                 # Send the Unapproved Message again
                 if event.text != prevmsg:
                     async for message in event.client.iter_messages(
-                        event.chat_id, from_user="me", search=UNAPPROVED_MSG
+                        event.chat_id, from_user="me", search=UNAPPROVED_MSG, file=CUSTOM_PIC
                     ):
                         await message.delete()
-                    await event.reply(f"{UNAPPROVED_MSG}")
+                    await event.reply(f" {CUSTOM_PIC} \n\n {UNAPPROVED_MSG} ")
             else:
-                await event.reply(f"{UNAPPROVED_MSG}")
+                await event.reply(f" {CUSTOM_PIC} \n\n {UNAPPROVED_MSG} ")
             LASTMSG.update({event.chat_id: event.text})
             if notifsoff:
                 await event.client.send_read_acknowledge(event.chat_id)
@@ -91,10 +99,10 @@ async def permitpm(event):
             else:
                 COUNT_PM[event.chat_id] = COUNT_PM[event.chat_id] + 1
 
-            if COUNT_PM[event.chat_id] > 5:
+            if COUNT_PM[event.chat_id] > 3:
                 await event.respond(
-                    "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
-                    "`Ke Room Chat!!!`"
+                    "✣ __**SISTEM BLOKIR OTOMATIS**__\n\n__Mohon Maaf Nomor Anda Telah Di Blokir Karena Spam Pesan__\n"
+                    f"__Ke Room Chat Tuan {DEFAULTUSER}__"
                 )
 
                 try:
