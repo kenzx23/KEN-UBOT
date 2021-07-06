@@ -10,12 +10,12 @@ from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
 
 @register(outgoing=True, pattern=r"^.hz(:? |$)(.*)?")
 async def _(hazmat):
-    await hazmat.edit("`Lord Ingin Mengaktifkan Perintah Hazmat ヅ`")
+    await hazmat.edit("`Tuan Ingin Mengaktifkan Perintah Hazmat ヅ`")
     level = hazmat.pattern_match.group(2)
     if hazmat.fwd_from:
         return
     if not hazmat.reply_to_msg_id:
-        await hazmat.edit("`Lord, Mohon Balas Ke Sticker/Gambar ヅ`")
+        await hazmat.edit("`Tuan, Mohon Balas Ke Sticker/Gambar ヅ`")
         return
     reply_message = await hazmat.get_reply_message()
     if not reply_message.media:
