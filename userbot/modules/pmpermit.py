@@ -1,4 +1,3 @@
-
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
@@ -25,37 +24,9 @@ from userbot import (
 )
 
 
-if PMPERMIT_PIC is None:
-    CUSTOM_PIC = "https://telegra.ph/file/ca73aa215579a60c700f3.jpg"
-else:
-    CUSTOM_PIC = str(PMPERMIT_PIC)
-
-# ========================= CONSTANTS ============================
-
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-CUSTOM_TEXT = str(
-    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Halo kawan, saya bot yang menjaga room chat king {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
-DEF_UNAPPROVED_MSG = (
-    f"╔══════ 👑 ══════╗\n      **ROOM CHAT KING**     \n╚══════ 〠 ══════╝  \n"
-    f"⎆ __{CUSTOM_TEXT}__ \n"
-    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
-    f"⎆ **Dilarang Spam** \n"
-    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
-    f"◈ **KING** : {DEFAULTUSER}\n"
-    f"◈ **SUPPORT** ⚡️𝗞𝗶𝗻𝗴-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡️\n")
-# =================================================================
-
-
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-"""Userbot module for keeping control who PM you."""
-
 
 if PMPERMIT_PIC is None:
-    CUSTOM_PIC = "https://telegra.ph/file/ca73aa215579a60c700f3.jpg"
+    CUSTOM_PIC = "https://telegra.ph/file/9cf8933ad10f520fc72e2.jpg"
 else:
     CUSTOM_PIC = str(PMPERMIT_PIC)
 
