@@ -26,13 +26,12 @@ async def _(event):
             await asyncio.sleep(1)
             await conv.send_message("Generate New")
             response = await response
-            lorduserbot = ((response).reply_markup.rows[2].buttons[0].url)
+            ((response).reply_markup.rows[2].buttons[0].url)
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
             await lord.edit("`Mohon buka blokir` @TempMailBot `lalu coba lagi`")
             return
         await event.edit(f"**KEN TEMPMAIL** ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK VERIFIKASI]({kenubot})")
-
 
 
 CMD_HELP.update({"tempmail": "**Modules:** __Temp Mail__\n\n**Perintah:** `.tm`"
