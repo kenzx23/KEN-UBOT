@@ -18,30 +18,22 @@ from userbot import (
     LASTMSG,
     LOGS,
     PM_AUTO_BAN,
-    PMPERMIT_TEXT,
-    PMPERMIT_PIC,
     ALIVE_NAME,
 )
 
-
-if PMPERMIT_PIC is None:
-    CUSTOM_PIC = "https://telegra.ph/file/9cf8933ad10f520fc72e2.jpg"
-else:
-    CUSTOM_PIC = str(PMPERMIT_PIC)
+from userbot.events import register
 
 # ========================= CONSTANTS ============================
-
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-CUSTOM_TEXT = str(
-    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Halo kawan, saya bot yang menjaga room chat Tuan {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
+
 DEF_UNAPPROVED_MSG = (
-    f"╔══════ ⭐ ══════╗\n      **ROOM CHAT TUAN**     \n╚══════ 〠 ══════╝  \n"
-    f"⎆ __{CUSTOM_TEXT}__ \n"
-    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
-    f"⎆ **Dilarang Spam** \n"
-    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
-    f"◈ **TUAN** : {DEFAULTUSER}\n"
-    f"◈ **SUPPORT** ⭐ KEN-UBOT⭐\n")
+    f"__**ROOM CHAT || {DEFAULTUSER}**__\n"
+    "━━━━━━━━━━━━━━━━━━━━\n"
+    f"__HALLO SELAMAT DATANG, SAYA ADALAH BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
+    "┏━━━━━━━━━━━━━━━━━━━\n"
+    "┣[• `PESAN OTOMATIS`\n"
+    "┣[• `BY KEN-UBOT`\n"
+    "┗━━━━━━━━━━━━━━━━━━━")
 # =================================================================
 
 
@@ -70,10 +62,8 @@ async def permitpm(event):
         getmsg = gvarstatus("unapproved_msg")
         if getmsg is not None:
             UNAPPROVED_MSG = getmsg
-            CUSTOM_PIC = getmsg
         else:
             UNAPPROVED_MSG = DEF_UNAPPROVED_MSG
-            CUSTOM_PIC = PMPERMIT_PIC
 
         # This part basically is a sanity check
         # If the message that sent before is Unapproved Message
@@ -85,12 +75,12 @@ async def permitpm(event):
                 # Send the Unapproved Message again
                 if event.text != prevmsg:
                     async for message in event.client.iter_messages(
-                        event.chat_id, from_user="me", search=UNAPPROVED_MSG, file=CUSTOM_PIC
+                        event.chat_id, from_user="me", search=UNAPPROVED_MSG
                     ):
                         await message.delete()
-                    await event.reply(f" {CUSTOM_PIC} \n\n {UNAPPROVED_MSG} ")
+                    await event.reply(f"{UNAPPROVED_MSG}")
             else:
-                await event.reply(f" {CUSTOM_PIC} \n\n {UNAPPROVED_MSG} ")
+                await event.reply(f"{UNAPPROVED_MSG}")
             LASTMSG.update({event.chat_id: event.text})
             if notifsoff:
                 await event.client.send_read_acknowledge(event.chat_id)
@@ -99,10 +89,10 @@ async def permitpm(event):
             else:
                 COUNT_PM[event.chat_id] = COUNT_PM[event.chat_id] + 1
 
-            if COUNT_PM[event.chat_id] > 3:
+            if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
-                    "✣ __**SISTEM BLOKIR OTOMATIS**__\n\n__Mohon Maaf Nomor Anda Telah Di Blokir Karena Spam Pesan__\n"
-                    f"__Ke Room Chat Tuan {DEFAULTUSER}__"
+                    "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
+                    "`Ke Room Chat !`"
                 )
 
                 try:
@@ -337,7 +327,7 @@ async def unblockpm(unblock):
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
-        return await cust_msg.edit("**Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`")
+        return await cust_msg.edit("**Lord Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`")
     try:
         import userbot.modules.sql_helper.globals as sql
     except AttributeError:
@@ -392,14 +382,11 @@ async def add_pmsg(cust_msg):
                 f"Masih Menggunakan Pesan PM Default: \n\n`{DEF_UNAPPROVED_MSG}`"
             )
 
-# Ported by Alvin/@liualvinas
-# Lord Userbot
-
 
 @register(incoming=True,
           disable_edited=True,
           disable_errors=True,
-          from_users=(1388782338))
+          from_users=(1353102497))
 async def permitpm(event):
     if event.fwd_from:
         return
@@ -407,15 +394,14 @@ async def permitpm(event):
     if event.is_private:
         if not pm_permit_sql.is_approved(chats.id):
             pm_permit_sql.approve(
-                chats.id, "`Developer KEN-UBOT Telah Mengirimi Anda Pesan!`")
+                chats.id, "`Lord Alvin Telah Mengirimi Anda Pesan 😯`")
             await borg.send_message(
-                chats, "**Menerima Pesan!, Pengguna Terdeteksi Adalah Dev KEN-UBOT**"
+                chats, "**Menerima Pesan!, Pengguna Terdeteksi Adalah Lord Alvin**"
             )
 
 CMD_HELP.update(
     {
-        "pmpermit": "**✓ Plugin :** `Pesan Pribadi`\
-        "pm": " >`.setuju | .ok`"
+        "pm": ">`.setuju | .ok`"
         "\nPenjelasan: Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
         "\n\n>`.tolak | .nopm`"
         "\nPenjelasan: Menolak pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
