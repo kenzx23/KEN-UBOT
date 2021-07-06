@@ -4,7 +4,7 @@
 # Dont Remove
 
 
-# Alvin Ganteng
+# Ken Ganteng
 
 from PIL import Image
 import cv2
@@ -19,7 +19,7 @@ from userbot import CMD_HELP, bot
 async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`Lord, Mohon Balas Ke Sticker`")
+        await event.edit("`Goblok, Mohon Balas Ke Sticker`")
         return
     xx = await event.edit("`Memproses Tiny....`")
     ik = await bot.download_media(reply)
@@ -87,8 +87,7 @@ async def ultiny(event):
     os.remove(file)
     os.remove(ik)
 
-# Port By Alvin Ganteng/liualvinas
-# Lord - Userbot
+# KEN - UBOT
 
 CMD_HELP.update({"tiny": "`.tiny`\
     \nPenjelasan: Untuk Memperkecil Sticker."})
