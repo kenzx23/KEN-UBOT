@@ -24,7 +24,6 @@ from userbot import (
 )
 
 
-
 if PMPERMIT_PIC is None:
     CUSTOM_PIC = "https://telegra.ph/file/9cf8933ad10f520fc72e2.jpg"
 else:
