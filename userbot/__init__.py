@@ -147,7 +147,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
-# untuk perintah .lord
+# untuk perintah .ken
 LORD_TEKS_KUSTOM = os.environ.get("LORD_TEKS_KUSTOM", None)
 
 # Default .alive name
@@ -180,7 +180,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/9cf8933ad10f520fc72e2.jpg"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -319,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```『Lord-Userbot Telah Aktif』```")
+    await bot.send_message(BOTLOG_CHATID, "```🐖KEN-UBOT🐖 SUDAH AKTIF GOBLOK!!!```")
     return
 
 with bot:
