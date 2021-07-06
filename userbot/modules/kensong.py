@@ -2,7 +2,7 @@
 # Jangan Dihapuss!!!
 # Thanks Ultroid
 # Full Love From Vicky For All Lord
-# @LORDUSERBOT_GROUP
+# @KENUBOT
 
 
 import json
@@ -125,9 +125,9 @@ Artis - {}
     )
     os.remove(f"{rip_data['id']}.mp3")
 
-# For Lord - Userbot
 # Piki Ganteng
 # Tapi Gantengan Alvin
+# Lebih Gantengan Ken Lah
 
 CMD_HELP.update({"song": "**Modules:** __Song__\n\n**Perintah:** `.song <judul>`"
                  "\n**Penjelasan:** Mendownload Lagu"})
