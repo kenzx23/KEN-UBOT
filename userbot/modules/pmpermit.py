@@ -405,7 +405,7 @@ async def permitpm(event):
 CMD_HELP.update(
     {
         "pmpermit": "**⭐ Plugin :** `Pesan Pribadi`\
-        "pm": ">`.setuju | .ok`"
+        "pm": " >`.setuju | .ok`"
         "\nPenjelasan: Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
         "\n\n>`.tolak | .nopm`"
         "\nPenjelasan: Menolak pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
